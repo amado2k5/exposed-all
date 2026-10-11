@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EXPOSED — Coming Soon</title>
+<meta name="description" content="Unfiltered rants and ramblings on Ontario health care, corporate life, Western democracy and the AI job grab. Coming soon.">
+<meta property="og:title" content="EXPOSED — The truth is loading.">
+<meta property="og:description" content="Ontario health care. Corporate machines. Democracy™. AI and your job. No sponsors. No filter. Coming soon.">
+<meta name="theme-color" content="#0b0a09">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b0a09'/><text x='50' y='72' font-size='70' text-anchor='middle' fill='%23ff4d1a' font-family='Arial Black'>X</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;600&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ash: #0b0a09;
+    --soot: #161412;
+    --char: #24201c;
+    --bone: #ece4d6;
+    --dust: #9a9086;
+    --ember: #ff4d1a;
+    --flame: #ffb347;
+    --blood: #b3170b;
+    --redact: #000;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ash);
+    color: var(--bone);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  ::selection { background: var(--ember); color: var(--ash); }
+
+  /* ---------- atmosphere ---------- */
+  #embers { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  .glow {
+    position: fixed; left: 50%; bottom: -40vh; width: 140vw; height: 80vh;
+    transform: translateX(-50%); z-index: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(255,77,26,.28), rgba(179,23,11,.12) 40%, transparent 70%);
+    animation: breathe 6s ease-in-out infinite;
+  }
+  @keyframes breathe { 50% { opacity: .6; transform: translateX(-50%) scale(1.05); } }
+  .grain {
+    position: fixed; inset: -50%; z-index: 50; pointer-events: none; opacity: .09;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    animation: grain 1s steps(6) infinite;
+  }
+  @keyframes grain {
+    0%,100% { transform: translate(0,0) } 20% { transform: translate(-5%,3%) }
+    40% { transform: translate(3%,-6%) } 60% { transform: translate(-7%,2%) } 80% { transform: translate(4%,5%) }
+  }
+  .scanlines {
+    position: fixed; inset: 0; z-index: 49; pointer-events: none;
+    background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0,0,0,.18) 2px 3px);
+  }
+
+  main { position: relative; z-index: 2; }
+  .wrap { width: min(1100px, 100% - 32px); margin-inline: auto; }
+
+  /* ---------- top ticker ---------- */
+  .ticker {
+    position: relative; z-index: 3; overflow: hidden; white-space: nowrap;
+    background: var(--ember); color: var(--ash);
+    font-family: "Anton", sans-serif; letter-spacing: .08em; font-size: 14px;
+    padding: 6px 0; border-bottom: 2px solid var(--ash);
+  }
+  .ticker span { display: inline-block; padding-left: 100%; animation: tick 38s linear infinite; }
+  @keyframes tick { to { transform: translateX(-100%); } }
+
+  /* ---------- hero ---------- */
+  .hero {
+    min-height: calc(100vh - 34px);
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 56px 0 72px;
+  }
+  .stamp {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: "Special Elite", monospace; color: var(--ember);
+    border: 2px solid var(--ember); padding: 6px 14px; transform: rotate(-2deg);
+    width: fit-content; font-size: 14px; letter-spacing: .15em; text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ember); animation: blink 1.2s infinite; }
+  @keyframes blink { 50% { opacity: .15; } }
+
+  h1 {
+    font-family: "Anton", Impact, sans-serif; font-weight: 400;
+    font-size: clamp(72px, 19vw, 240px); line-height: .85; letter-spacing: -.01em;
+    text-transform: uppercase; position: relative; color: var(--bone);
+    text-shadow: 0 0 40px rgba(255,77,26,.25);
+  }
+  .glitch { position: relative; display: inline-block; }
+  .glitch::before, .glitch::after {
+    content: attr(data-text); position: absolute; inset: 0; pointer-events: none; opacity: 0;
+  }
+  .glitch::before { color: var(--ember); clip-path: inset(0 0 65% 0); animation: g1 3.5s infinite steps(1); }
+  .glitch::after  { color: #3df2ff; clip-path: inset(60% 0 0 0); animation: g2 3.5s infinite steps(1); mix-blend-mode: screen; }
+  @keyframes g1 { 0%,90%,99%,100% { opacity: 0; transform: none; } 91% { opacity: 1; transform: translate(-6px,-2px); } 94% { opacity: 1; transform: translate(5px,1px); } 97% { opacity: 1; transform: translate(-3px,2px); } }
+  @keyframes g2 { 0%,88%,98%,100% { opacity: 0; transform: none; } 89% { opacity: .7; transform: translate(6px,2px); } 93% { opacity: .7; transform: translate(-5px,-1px); } 96% { opacity: .7; transform: translate(3px,-2px); } }
+  .burn { color: transparent; -webkit-text-stroke: 2px var(--ember); }
+
+  .tagline {
+    font-family: "Special Elite", monospace;
+    font-size: clamp(20px, 3.4vw, 34px); margin-top: 22px; max-width: 22ch; line-height: 1.25;
+  }
+  .tagline em { font-style: normal; color: var(--ember); }
+  .typed::after { content: "▌"; color: var(--ember); animation: blink .9s infinite; margin-left: 2px; }
+
+  .lede { margin-top: 28px; max-width: 60ch; color: var(--dust); font-size: 15px; }
+  .lede strong { color: var(--bone); font-weight: 600; }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+  .btn {
+    font-family: "Anton", sans-serif; letter-spacing: .1em; text-transform: uppercase;
+    font-size: 17px; text-decoration: none; padding: 14px 26px; border: 2px solid var(--ember);
+    color: var(--ash); background: var(--ember); cursor: pointer; transition: transform .15s, box-shadow .15s;
+    box-shadow: 5px 5px 0 var(--blood);
+  }
+  .btn:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--blood); }
+  .btn.ghost { background: transparent; color: var(--ember); box-shadow: none; }
+  .btn.ghost:hover { background: rgba(255,77,26,.1); }
+
+  /* ---------- redacted ---------- */
+  .redacted {
+    background: var(--redact); color: transparent; padding: 0 4px; border-radius: 1px;
+    transition: color .35s, background .35s; cursor: help; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+    outline: 1px solid #2a2622;
+  }
+  .redacted:hover, .redacted:focus, .redacted.show { color: var(--ember); background: rgba(255,77,26,.08); outline-color: var(--ember); }
+
+  /* ---------- sections ---------- */
+  section { padding: 80px 0; }
+  .label {
+    font-family: "Special Elite", monospace; color: var(--ember); letter-spacing: .25em;
+    font-size: 13px; text-transform: uppercase; margin-bottom: 12px;
+  }
+  h2 {
+    font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase;
+    font-size: clamp(40px, 7vw, 76px); line-height: .95; margin-bottom: 18px;
+  }
+  .rule { height: 2px; background: linear-gradient(90deg, var(--ember), transparent); margin: 0 0 40px; }
+
+  /* case files */
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px; }
+  .file {
+    position: relative; background: var(--soot); border: 1px solid var(--char);
+    padding: 26px 22px 24px; overflow: hidden; transition: transform .25s, border-color .25s;
+  }
+  .file::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, transparent 60%, rgba(255,77,26,.08));
+    opacity: 0; transition: opacity .3s;
+  }
+  .file:hover { transform: translateY(-4px) rotate(-.3deg); border-color: var(--ember); }
+  .file:hover::before { opacity: 1; }
+  .file .no { font-family: "Special Elite", monospace; color: var(--dust); font-size: 12px; letter-spacing: .2em; }
+  .file h3 { font-family: "Anton", sans-serif; font-weight: 400; font-size: 28px; text-transform: uppercase; line-height: 1.05; margin: 10px 0 12px; }
+  .file p { color: var(--dust); font-size: 14px; }
+  .file .status {
+    position: absolute; top: 18px; right: -34px; transform: rotate(35deg);
+    background: var(--blood); color: var(--bone); font-family: "Anton", sans-serif;
+    font-size: 11px; letter-spacing: .15em; padding: 3px 40px;
+  }
+  .file .classified {
+    margin-top: 18px; font-family: "Special Elite", monospace; font-size: 12px; color: var(--ember);
+    border-top: 1px dashed var(--char); padding-top: 12px;
+  }
+
+  /* manifesto */
+  .manifesto { background: var(--bone); color: var(--ash); position: relative; }
+  .manifesto::before, .manifesto::after {
+    content: ""; position: absolute; left: 0; right: 0; height: 22px;
+    background: var(--ash);
+    -webkit-mask: radial-gradient(14px at 50% 0, transparent 97%, #000) 0 0 / 26px 22px repeat-x;
+            mask: radial-gradient(14px at 50% 0, transparent 97%, #000) 0 0 / 26px 22px repeat-x;
+  }
+  .manifesto::before { top: -1px; transform: scaleY(-1); }
+  .manifesto::after { bottom: -1px; }
+  .manifesto .label { color: var(--blood); }
+  .manifesto ol { list-style: none; counter-reset: m; display: grid; gap: 22px; max-width: 760px; }
+  .manifesto li {
+    counter-increment: m; font-family: "Special Elite", monospace; font-size: clamp(18px, 2.4vw, 24px);
+    line-height: 1.35; padding-left: 64px; position: relative;
+  }
+  .manifesto li::before {
+    content: counter(m, decimal-leading-zero); position: absolute; left: 0; top: -4px;
+    font-family: "Anton", sans-serif; font-size: 38px; color: var(--blood); line-height: 1;
+  }
+  .manifesto li strike { text-decoration-color: var(--blood); text-decoration-thickness: 3px; color: #6d655c; }
+  .signoff { margin-top: 40px; font-family: "Anton", sans-serif; font-size: clamp(28px, 4vw, 44px); text-transform: uppercase; color: var(--blood); }
+
+  /* phoenix / rise */
+  .rise { text-align: center; padding: 110px 0 90px; }
+  .rise h2 { font-size: clamp(48px, 10vw, 128px); }
+  .rise h2 span { display: block; }
+  .rise .ash { color: #3b3631; }
+  .rise .fire {
+    background: linear-gradient(0deg, var(--blood), var(--ember) 45%, var(--flame));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 0 22px rgba(255,77,26,.45));
+  }
+  .rise p { color: var(--dust); max-width: 52ch; margin: 18px auto 0; }
+
+  /* signup */
+  .signup { border: 2px dashed var(--char); padding: clamp(24px, 5vw, 48px); background: rgba(22,20,18,.7); }
+  .signup form { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .signup input {
+    flex: 1 1 260px; background: var(--ash); border: 2px solid var(--char); color: var(--bone);
+    font: inherit; padding: 14px 16px; outline: none;
+  }
+  .signup input:focus { border-color: var(--ember); }
+  .signup .note { color: var(--dust); font-size: 13px; margin-top: 14px; }
+  .msg { margin-top: 14px; font-family: "Special Elite", monospace; color: var(--ember); min-height: 1.6em; }
+
+  footer { border-top: 1px solid var(--char); padding: 28px 0 40px; color: var(--dust); font-size: 12px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer a { color: var(--ember); }
+
+  /* reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    #embers { display: none; }
+  }
+</style>
+</head>
+<body>
+<canvas id="embers" aria-hidden="true"></canvas>
+<div class="glow" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+
+<div class="ticker" aria-hidden="true"><span>
+  ★ WAIT TIMES ARE NOT AN ACCIDENT ★ READ THE FINE PRINT ★ YOUR VOTE, THEIR DONORS ★ "RESTRUCTURING" IS A LAYOFF WITH A PR TEAM ★ THE ALGORITHM DOESN'T NEED A PENSION ★ QUESTION EVERYTHING — INCLUDING THIS ★ NO SPONSORS. NO FILTER. NO PERMISSION ASKED. ★
+</span></div>
+
+<main>
+  <!-- HERO -->
+  <header class="hero wrap">
+    <div class="stamp"><span class="dot"></span> Transmission incoming</div>
+    <h1>
+      <span class="glitch" data-text="Exposed">Exposed</span><br>
+      <span class="burn">.all</span>
+    </h1>
+    <p class="tagline"><span class="typed" id="typed">They counted us out.</span></p>
+    <p class="lede">
+      An unfiltered blog from someone who's been inside the system and is done staying quiet.
+      <strong>Ontario health care.</strong> <strong>Corporate machines.</strong>
+      <strong>The <span class="redacted" tabindex="0" title="hover to declassify">myth</span> of Western democracy.</strong>
+      <strong>AI coming for your paycheque.</strong> Rants, receipts and raw opinion —
+      the stuff they'd rather you <span class="redacted" tabindex="0">didn't hear</span>.
+    </p>
+    <div class="cta-row">
+      <a href="#files" class="btn">Open the files</a>
+      <a href="#join" class="btn ghost">Stay in the loop</a>
+    </div>
+  </header>
+
+  <!-- CASE FILES -->
+  <section id="files" class="wrap">
+    <div class="reveal">
+      <p class="label">// Dossiers in progress</p>
+      <h2>The files they'd<br>rather stay closed</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="files">
+      <article class="file reveal">
+        <span class="status">Classified</span>
+        <span class="no">FILE 001 — HEALTH</span>
+        <h3>Ontario Health Care: Code Grey</h3>
+        <p>Hallway beds, endless waitlists, and a system that runs on burnout. What the press releases leave out — from someone who's seen it up close.</p>
+        <p class="classified">Status: <span class="redacted" tabindex="0">gathering receipts</span></p>
+      </article>
+      <article class="file reveal">
+        <span class="status">Classified</span>
+        <span class="no">FILE 002 — CORPORATE</span>
+        <h3>Inside the Machine</h3>
+        <p>"We're a family." Until the quarterly numbers come in. Notes from working for big corporations — the culture, the spin, the quiet exits.</p>
+        <p class="classified">Status: <span class="redacted" tabindex="0">names withheld… for now</span></p>
+      </article>
+      <article class="file reveal">
+        <span class="status">Classified</span>
+        <span class="no">FILE 003 — POWER</span>
+        <h3>Democracy&trade; (Terms Apply)</h3>
+        <p>We're told we choose. So why does it always feel like the menu was printed before we sat down? Lobbyists, donors and the illusion of choice in the West.</p>
+        <p class="classified">Status: <span class="redacted" tabindex="0">drafting the uncomfortable parts</span></p>
+      </article>
+      <article class="file reveal">
+        <span class="status">Classified</span>
+        <span class="no">FILE 004 — FUTURE</span>
+        <h3>The Robots Want Your Desk</h3>
+        <p>AI won't ask for a raise, a pension or a sick day. Who wins when the work disappears — and who's left holding the bill?</p>
+        <p class="classified">Status: <span class="redacted" tabindex="0">running the numbers</span></p>
+      </article>
+      <article class="file reveal">
+        <span class="status">Unhinged</span>
+        <span class="no">FILE 005 — RANTS</span>
+        <h3>Unfiltered</h3>
+        <p>Everything else that keeps me up at night. No editor. No talking points. Just a person, a keyboard and too much coffee.</p>
+        <p class="classified">Status: <span class="redacted" tabindex="0">boiling over</span></p>
+      </article>
+      <article class="file reveal">
+        <span class="status">Redacted</span>
+        <span class="no">FILE 00█ — ???</span>
+        <h3><span class="redacted" tabindex="0">You'll see.</span></h3>
+        <p>Some things are better revealed when the time is right. Check back. Bring friends. Bring questions.</p>
+        <p class="classified">Status: <span class="redacted" tabindex="0">soon</span></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <div class="wrap reveal">
+      <p class="label">// The rules of this place</p>
+      <h2>Manifesto</h2>
+      <ol>
+        <li>No sponsors. No advertisers. No one to <strike>keep happy</strike> answer to.</li>
+        <li>Opinions are labelled as opinions. Facts come with receipts.</li>
+        <li>Punch up, never down. The powerful can take it.</li>
+        <li>Being called "too angry" is not a counter-argument.</li>
+        <li>Question everything — including me.</li>
+      </ol>
+      <p class="signoff">The underdog has a keyboard now.</p>
+    </div>
+  </section>
+
+  <!-- RISE -->
+  <section class="rise wrap reveal">
+    <p class="label">// From the ashes</p>
+    <h2><span class="ash">They burned it down.</span><span class="fire">We rise anyway.</span></h2>
+    <p>Every movement started with one person who refused to shut up. This is mine. The first dispatches are being written right now.</p>
+  </section>
+
+  <!-- SIGNUP -->
+  <section id="join" class="wrap reveal">
+    <div class="signup">
+      <p class="label">// Join the resistance</p>
+      <h2>Be here when<br>the files drop.</h2>
+      <!-- To collect emails, set FORM_ENDPOINT in the script below (Formspree, Buttondown, ConvertKit, etc.). -->
+      <form id="signup" hidden>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button class="btn" type="submit">Count me in</button>
+      </form>
+      <p class="note" id="signupNote">No spam. No selling your data. One email when the first dispatch goes live.</p>
+      <p class="msg" id="msg" role="status"></p>
+      <div class="cta-row" id="fallback">
+        <button class="btn" type="button" id="bookmark">Bookmark this page</button>
+        <button class="btn ghost" type="button" id="share">Share the signal</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> EXPOSED.ALL — Opinions are the author's own. Ramblings may cause discomfort.</span>
+    <span>Status: <span style="color:var(--ember)">● building in the dark</span></span>
+  </div>
+</footer>
+
+<script>
+  // ===== Config =====
+  // Paste a form endpoint here (e.g. "https://formspree.io/f/xxxx") to turn on the email signup.
+  const FORM_ENDPOINT = "";
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ===== Typewriter tagline =====
+  const lines = [
+    "They counted us out.",
+    "They called it \"policy.\"",
+    "They called us quiet.",
+    "The truth is loading…",
+  ];
+  const typedEl = document.getElementById("typed");
+  if (!reduceMotion) {
+    let li = 0, ci = lines[0].length, deleting = true;
+    setTimeout(function step() {
+      const line = lines[li];
+      if (deleting) {
+        ci--;
+        if (ci <= 0) { deleting = false; li = (li + 1) % lines.length; }
+      } else {
+        ci++;
+        if (ci >= lines[li].length) { deleting = true; typedEl.textContent = lines[li]; return setTimeout(step, 2400); }
+      }
+      typedEl.textContent = lines[li].slice(0, ci);
+      setTimeout(step, deleting ? 35 : 75);
+    }, 2400);
+  }
+
+  // ===== Tap to declassify on touch =====
+  document.querySelectorAll(".redacted").forEach(el =>
+    el.addEventListener("click", () => el.classList.toggle("show")));
+
+  // ===== Scroll reveal =====
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  }), { threshold: .12 });
+  document.querySelectorAll(".reveal").forEach((el, i) => {
+    el.style.transitionDelay = (el.classList.contains("file") ? (i % 3) * 90 : 0) + "ms";
+    io.observe(el);
+  });
+
+  // ===== Signup / fallback =====
+  const form = document.getElementById("signup");
+  const msg = document.getElementById("msg");
+  if (FORM_ENDPOINT) {
+    form.hidden = false;
+    document.getElementById("fallback").hidden = true;
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      msg.textContent = "Transmitting…";
+      try {
+        const res = await fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+        if (!res.ok) throw new Error();
+        form.reset();
+        msg.textContent = "You're on the list. Watch your inbox.";
+      } catch { msg.textContent = "Signal jammed. Try again in a minute."; }
+    });
+  } else {
+    document.getElementById("signupNote").textContent = "Email list coming soon. Until then — bookmark this page and come back. The first dispatch is closer than you think.";
+  }
+  document.getElementById("bookmark").addEventListener("click", () => {
+    const mac = /Mac|iPhone|iPad/.test(navigator.platform);
+    msg.textContent = `Press ${mac ? "⌘" : "Ctrl"} + D to bookmark. See you on the other side.`;
+  });
+  document.getElementById("share").addEventListener("click", async () => {
+    const data = { title: "EXPOSED", text: "Something's coming. No sponsors. No filter.", url: location.href };
+    try {
+      if (navigator.share) await navigator.share(data);
+      else { await navigator.clipboard.writeText(location.href); msg.textContent = "Link copied. Spread the word."; }
+    } catch {}
+  });
+
+  // ===== Rising embers =====
+  const cvs = document.getElementById("embers");
+  const ctx = cvs.getContext("2d");
+  let W, H, embers = [];
+  function resize() {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    cvs.width = W * dpr; cvs.height = H * dpr;
+    cvs.style.width = W + "px"; cvs.style.height = H + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function spawn(initial) {
+    return {
+      x: Math.random() * W,
+      y: initial ? Math.random() * H : H + 10,
+      r: Math.random() * 2.2 + .4,
+      vy: Math.random() * .8 + .3,
+      drift: Math.random() * 2 * Math.PI,
+      life: 1,
+      hue: 15 + Math.random() * 30,
+    };
+  }
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = "lighter";
+    for (const p of embers) {
+      p.y -= p.vy; p.drift += .02; p.x += Math.sin(p.drift) * .4;
+      p.life = Math.min(1, p.y / H + .1);
+      ctx.beginPath();
+      ctx.fillStyle = `hsla(${p.hue},100%,60%,${p.life * .9})`;
+      ctx.shadowBlur = 12; ctx.shadowColor = `hsla(${p.hue},100%,50%,1)`;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      if (p.y < -10) Object.assign(p, spawn(false));
+    }
+    requestAnimationFrame(frame);
+  }
+  if (!reduceMotion) {
+    resize();
+    addEventListener("resize", resize);
+    const count = Math.round(Math.min(110, innerWidth / 12));
+    for (let i = 0; i < count; i++) embers.push(spawn(true));
+    frame();
+  }
+</script>
+</body>
+</html>
