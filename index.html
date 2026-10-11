@@ -220,6 +220,8 @@
   footer { border-top: 1px solid var(--char); padding: 28px 0 40px; color: var(--dust); font-size: 12px; }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
   footer a { color: var(--ember); }
+  .mail { color: var(--ember); text-decoration: none; border-bottom: 1px dashed var(--ember); }
+  .mail:hover { border-bottom-style: solid; }
 
   /* reveal on scroll */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
@@ -311,7 +313,7 @@
         <span class="status">Redacted</span>
         <span class="no">FILE 00█ — ???</span>
         <h3><span class="redacted" tabindex="0">You'll see.</span></h3>
-        <p>Some things are better revealed when the time is right. Check back. Bring friends. Bring questions.</p>
+        <p>Some things are better revealed when the time is right. Check back. Bring friends. Bring questions. Got a story of your own? <a class="mail" href="mailto:is@all.exposed?subject=Tip">is@all.exposed</a></p>
         <p class="classified">Status: <span class="redacted" tabindex="0">soon</span></p>
       </article>
     </div>
@@ -353,7 +355,8 @@
       <p class="note" id="signupNote">No spam. No selling your data. One email when the first dispatch goes live.</p>
       <p class="msg" id="msg" role="status"></p>
       <div class="cta-row" id="fallback">
-        <button class="btn" type="button" id="bookmark">Bookmark this page</button>
+        <a class="btn" href="mailto:is@all.exposed?subject=Count%20me%20in&body=Let%20me%20know%20when%20the%20first%20dispatch%20drops.">Email to join</a>
+        <button class="btn ghost" type="button" id="bookmark">Bookmark this page</button>
         <button class="btn ghost" type="button" id="share">Share the signal</button>
       </div>
     </div>
@@ -363,6 +366,7 @@
 <footer>
   <div class="wrap">
     <span>© <span id="yr"></span> EXPOSED.ALL — Opinions are the author's own. Ramblings may cause discomfort.</span>
+    <span>Tips &amp; contact: <a href="mailto:is@all.exposed">is@all.exposed</a></span>
     <span>Status: <span style="color:var(--ember)">● building in the dark</span></span>
   </div>
 </footer>
@@ -429,7 +433,7 @@
       } catch { msg.textContent = "Signal jammed. Try again in a minute."; }
     });
   } else {
-    document.getElementById("signupNote").textContent = "Email list coming soon. Until then — bookmark this page and come back. The first dispatch is closer than you think.";
+    document.getElementById("signupNote").textContent = "Want a heads-up when the first dispatch drops? Email is@all.exposed and you're on the list. Tips, stories and insider receipts welcome too.";
   }
   document.getElementById("bookmark").addEventListener("click", () => {
     const mac = /Mac|iPhone|iPad/.test(navigator.platform);
