@@ -1,0 +1,14 @@
+# Private data must never be committed to this public repo.
+# Message/email work lives outside the repo in ~/Documents/mom-case-evidence.
+data/
+*.jsonl
+*.mbox
+*.eml
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+Takeout/
+attachments/
+.env
+.DS_Store
