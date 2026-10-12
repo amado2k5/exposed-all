@@ -72,6 +72,29 @@
   .btn.ghost { background:transparent; color:var(--ember); box-shadow:none; border:1px solid var(--ember); }
   footer { border-top:1px solid var(--char); padding:24px 0 40px; font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--dust); }
   footer a { color:var(--ember); }
+  .related { padding:10px 0 30px; }
+  .rel-h { font-family:"Anton", sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px, 6vw, 46px); line-height:1.02; margin:10px 0 12px; }
+  .rel-intro { font-family:"IBM Plex Mono", monospace; font-size:14px; color:var(--dust); margin-bottom:18px; line-height:1.6; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+  .chip { font-family:"IBM Plex Mono", monospace; font-size:12px; background:transparent; color:var(--bone); border:1px solid var(--char); padding:6px 10px; cursor:pointer; }
+  .chip b { color:var(--ember); font-weight:600; margin-left:4px; }
+  .chip.on { background:var(--ember); color:var(--ash); border-color:var(--ember); }
+  .chip.on b { color:var(--ash); }
+  .stories { display:grid; gap:10px; }
+  .story { border:1px solid var(--char); background:var(--soot); }
+  .story[open] { border-color:var(--ember); }
+  .story summary { list-style:none; cursor:pointer; padding:14px 40px 14px 16px; display:grid; gap:4px; position:relative; }
+  .story summary::-webkit-details-marker { display:none; }
+  .story summary::after { content:"+"; position:absolute; right:16px; top:12px; font-family:"Anton", sans-serif; font-size:22px; color:var(--ember); }
+  .story[open] summary::after { content:"–"; }
+  .story .cat { font-family:"Special Elite", monospace; font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--ember); }
+  .story .st { font-family:"Source Serif 4", Georgia, serif; font-size:18px; font-weight:600; color:var(--bone); line-height:1.35; }
+  .story .src { font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--dust); }
+  .story .body { padding:0 16px 16px; font-size:17px; }
+  .story .body p { margin:0 0 .8em; }
+  .story blockquote { font-size:.85em; margin:.6em 0 1em; }
+  .story .orig { font-family:"IBM Plex Mono", monospace; font-size:13px; color:var(--ember); }
+  .story.hide { display:none; }
 </style>
 </head>
 <body>
@@ -295,6 +318,274 @@
 <p class="note"><em>Everything here is my family's experience, in our own words, from five years of messages we wrote as it happened, and from what I saw with my own eyes. Names of people and places have been left out on purpose. This isn't about one hospital or one nurse. It's about all of it.</em></p>
 <p class="note"><strong>Public sources referenced:</strong> Bill 7 / More Beds, Better Care Act (2022) and its January 2025 court ruling; Ontario Auditor General, 2021 annual report (cardiac and stroke care); Ontario Patient Ombudsman, first annual report (2016–17); Ontario Long-Term Care COVID-19 Commission final report (2021); CBC Marketplace (December 2021) on missed home care visits; Healthy Debate (June 2026); Canadian Press (June 2024); CTV/CP24 (July 2026).</p>
   </article>
+  <section class="wrap related" id="related">
+    <p class="label">// Not just us</p>
+    <h2 class="rel-h">Related stories from across Ontario</h2>
+    <p class="rel-intro">65 other families, patients and caregivers, collected from public posts and news reports. Tap any story to read what happened and open the original source. Summaries are in our words; the links lead to the original posts and articles.</p>
+    <div class="chips" role="toolbar" aria-label="Filter stories"><button class="chip on" data-cat="all" type="button">All <b>65</b></button><button class="chip" data-cat="Pressure to let go" type="button">Pressure to let go <b>5</b></button><button class="chip" data-cat="Neglect in hospital" type="button">Neglect in hospital <b>11</b></button><button class="chip" data-cat="Pushed out of hospital" type="button">Pushed out of hospital <b>15</b></button><button class="chip" data-cat="Treatment refused or delayed" type="button">Treatment refused or delayed <b>5</b></button><button class="chip" data-cat="Home care failures" type="button">Home care failures <b>15</b></button><button class="chip" data-cat="Afraid to complain" type="button">Afraid to complain <b>6</b></button><button class="chip" data-cat="Died waiting" type="button">Died waiting <b>8</b></button></div>
+    <div class="stories">
+<details class="story" data-cat="Pressure to let go">
+  <summary><span class="cat">Pressure to let go</span><span class="st">Son says he was pushed to sign DNR, then barred from bedside</span><span class="src">Rebel News · Jul 2022</span></summary>
+  <div class="body"><p>The son and power of attorney of an 84-year-old woman at Trenton Memorial says staff pressed him to sign a DNR soon after she was admitted and stopped him from feeding her. During visiting restrictions he was told he was trespassing, and she died days later. This account is from a partisan outlet, and the hospital did not comment.</p><blockquote>&ldquo;I was not kept in the loop on anything.&rdquo;</blockquote><a class="orig" href="https://www.rebelnews.com/son_trespassed_from_ailing_mothers_hospital_bedside" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pressure to let go">
+  <summary><span class="cat">Pressure to let go</span><span class="st">New doctor urges DNR for father recovering from COVID</span><span class="src">Reddit r/ontario · Jan 2021</span></summary>
+  <div class="body"><p>A 75-year-old man with myeloma had stabilized on high-flow oxygen in a St. Catharines hospital after a COVID outbreak. A new doctor told the family he was not improving, that he should give up the oxygen machine and that he could choose DNR. The family asked others for advice on how to respond.</p><blockquote>&ldquo;can choose Do Not Resuscitate and pass peacefully&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/ksrukf/father_is_in_hospital_recovering_from_covid19_new/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pressure to let go">
+  <summary><span class="cat">Pressure to let go</span><span class="st">Care homes prepare families for comfort care only during COVID</span><span class="src">Global News · Apr 2020</span></summary>
+  <div class="body"><p>Early in the pandemic, Ontario long-term care homes were advised not to send COVID-positive residents to hospital. A hospital letter urged comfort care instead, and some families were asked to sign waivers agreeing their relative would stay in the home.</p><blockquote>&ldquo;comfort to ease suffering at the end of life&rdquo;</blockquote><a class="orig" href="https://globalnews.ca/news/6779888/coronavirus-ontario-long-term-care-homes-preparing-families-for-the-worst/amp" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pressure to let go">
+  <summary><span class="cat">Pressure to let go</span><span class="st">Family says doctors imposed do-not-resuscitate without consultation</span><span class="src">CTV London · Aug 2019</span></summary>
+  <div class="body"><p>Doctors changed a father&#x27;s code status to DNR without asking his daughter, who was his substitute decision-maker. Her complaints and lawsuit failed, and a court ruled a DNR order is not treatment that needs consent.</p><a class="orig" href="https://london.ctvnews.ca/family-says-doctors-imposed-do-not-resusciate-without-consultation-1.4349666" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pressure to let go">
+  <summary><span class="cat">Pressure to let go</span><span class="st">Doctors wrote DNR over daughter&#x27;s full-code instruction</span><span class="src">National Post (via media digest) · Sep 2014</span></summary>
+  <div class="body"><p>Sunnybrook doctors wrote a DNR order for an elderly man against his daughter&#x27;s instruction for full resuscitation, without telling her. Her complaints to the College were rejected twice. An appeal board later found the law had been violated.</p><a class="orig" href="https://www.ipcrc.net/pdfs/media_watch/Suppl.2014.09.08.m.w.n374.pdf" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Father hospitalized with severe dehydration from long-term care home</span><span class="src">Reddit r/ontario · Apr 2026</span></summary>
+  <div class="body"><p>A family says their father&#x27;s long-term care home in eastern Ontario left him without oral hygiene, with feces on his bedding and with ants in his wheelchair. He was hospitalized with severe dehydration and a UTI. Ministry investigations brought only brief improvements.</p><blockquote>&ldquo;can’t see a way to keep him alive&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1sqbzd2/hiring_private_psw_to_work_in_ltc/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Family questions restraints and safety at Joseph Brant ICU</span><span class="src">Local Journalism Initiative · Jan 2026</span></summary>
+  <div class="body"><p>A mother with severe COPD was restrained overnight in the ICU although her family had refused consent, and callers were told she was fine. After she died, a coroner found she had been given a double opioid dose. The family was referred to patient relations, and no outcome has been reported.</p><blockquote>&ldquo;We just want people to know: be careful.&rdquo;</blockquote><a class="orig" href="https://local-news.ca/2026/01/17/a-familys-icu-experience-raises-questions-about-restraints-and-patient-safety-at-joseph-brant-hospital/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Sault man, 94, battling cancer spends days in hallway</span><span class="src">CTV Northern Ontario · Jul 2026</span></summary>
+  <div class="body"><p>A 94-year-old man with cancer waited more than three days in a Sault Ste. Marie hospital hallway. His son says the experience broke him.</p><a class="orig" href="https://guelph.ctvnews.ca/northern-ontario/article/sault-man-battling-cancer-spent-days-in-hospital-hallway" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Father develops stage 4 bedsore in ICU despite constant advocacy</span><span class="src">Reddit r/legaladvice · Jun 2025</span></summary>
+  <div class="body"><p>A caregiver reminded staff every day to reposition her father, and was told his pressure wound was healing. It worsened until bone was exposed. He had already left the same Ontario hospital once with a stage 3 sore, which healed under home care.</p><blockquote>&ldquo;He never had a pressure sore under my care&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/legaladvice/comments/1l3ffay/my_dad_developed_a_stage_4_bedsore_in_the_icu/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Wife left in her own vomit after 25 hours in hallway</span><span class="src">Reddit r/ontario · Apr 2024</span></summary>
+  <div class="body"><p>A man says his wife, who was in severe back pain, spent 25 hours on a hallway stretcher with a morphine shot once an hour. She still had no room hours later. Staff said she was in another nurse&#x27;s zone, and no one cleaned her up.</p><blockquote>&ldquo;laying in her own vomit for 2 hours because no nurse will help&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1c35eq8/i_love_watching_where_i_grew_up_crumble_to_greed/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Father not fed, left in soiled sheets at Brantford hospital</span><span class="src">Reddit r/ontario · Nov 2023</span></summary>
+  <div class="body"><p>A 75-year-old diabetic man admitted with a suspected stroke was refused food and given insulin he had never taken. He was left in wet sheets for hours. Then he was placed beside COVID patients and caught the virus.</p><blockquote>&ldquo;Left him in pissed sheets and diapers for hours&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/17zd4h9/healthcare_advice_for_my_elderly_father/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Toronto family sues care home over father&#x27;s severe bedsores</span><span class="src">Global News · May 2023</span></summary>
+  <div class="body"><p>A Toronto family sued a long-term care home, alleging their father was neglected and developed severe pressure sores while living there.</p><a class="orig" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPVGMyemtlNkVZSlBUQjBsNEdTZmVkRXI5ZTltSXpwR2laTmtDTVcxTkx6VG1yQURBQ0RWcTIyZXNnUm8yVnFuQmI5OXFDUm44UmJ0STRvemlWY0NBVHRnTjBWTFNGRFNGQS1EVkgwWmd0TmY5NzE1ZVZYLV9rZkotUQ?oc=5" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Weak elderly father left largely unattended in Ottawa hospital</span><span class="src">Reddit r/ottawa · Aug 2022</span></summary>
+  <div class="body"><p>A daughter says her father, whose kidneys were failing and who could not feed himself or ring for help, was checked only a couple of times a shift. Her mother sometimes waited an hour after ringing the bell. Nurses did not pass word of his decline on to doctors, and they blamed his not eating on the food.</p><blockquote>&ldquo;my dad is basically ignored by the nurses&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ottawa/comments/wrsgas/quality_of_care_in_ottawas_hospitals_right_now/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">87-year-old dies with bedsore after Burlington hospital stay</span><span class="src">CBC · 2022</span></summary>
+  <div class="body"><p>An 87-year-old man died with a bedsore at the base of his spine after a stay at Joseph Brant Hospital. His daughter says it took about a month for staff to tell the family, and the hospital said his care was appropriate.</p><a class="orig" href="https://amp.cbc.ca/lite/story/1.6621965" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Man left with huge bedsore dies of infection</span><span class="src">CBC · Jun 2019</span></summary>
+  <div class="body"><p>A Burlington man admitted after a fall was later found by another hospital to have a massive bedsore. He died of an infection linked to it, and the first hospital&#x27;s CEO apologized.</p><blockquote>&ldquo;Basically rotting alive&rdquo;</blockquote><a class="orig" href="https://amp.cbc.ca/lite/story/1.5138685" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Neglect in hospital">
+  <summary><span class="cat">Neglect in hospital</span><span class="st">Ottawa hospital faces allegations of patient abuse and neglect</span><span class="src">CTV News · 2014</span></summary>
+  <div class="body"><p>A daughter recorded more than 50 incidents at an Ottawa hospital, including soiled sheets left unchanged, empty IV bags and skin breakdown. Another family said no staff were available to feed or bathe their relative.</p><a class="orig" href="https://www.ctvnews.ca/health/ctv-exclusive-ottawa-hospital-faces-allegations-of-patient-abuse-neglect-1.1854203" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Aunt with dementia pushed toward unsafe discharge after rehab denied</span><span class="src">Reddit r/AgingParents · May 2026</span></summary>
+  <div class="body"><p>An 87-year-old woman who needed help to walk and toilet after a fall was told a short rehab stay was denied. The hospital planned to send her home within days. The same week, she was diagnosed with frontal lobe dementia.</p><blockquote>&ldquo;the discharge nurse called me to say the rehab was denied&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/AgingParents/comments/1tew3ui/being_strong_armed_to_accept_unsafe_discharge/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Mother billed $30,000 under Bill 7, then flown across Ontario</span><span class="src">Healthy Debate (opinion) · Jun 2026</span></summary>
+  <div class="body"><p>A professor writes that her 83-year-old mother, who has dementia, was billed about $30,000 after the family refused a long-term care bed they judged unsafe. Her mother was then flown about 1,400 km away and broke her wrist within days.</p><blockquote>&ldquo;That is not choice. That is pressure disguised as policy.&rdquo;</blockquote><a class="orig" href="https://healthydebate.ca/?p=39893" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">82-year-old discharged to motel after long Oshawa hospital stay</span><span class="src">CTV News Toronto / CP24 · Jul 2026</span></summary>
+  <div class="body"><p>An 82-year-old woman with severe COPD was discharged to a motel with two days of oxygen and medication and no shoes. Her family says it was not told. The hospital said she had not meaningfully taken part in discharge planning.</p><blockquote>&ldquo;disgusting&rdquo;</blockquote><a class="orig" href="https://www.cp24.com/local/durham/2026/07/10/its-disgusting-82-year-old-discharged-to-motel-after-lengthy-oshawa-hospital-stay/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Hospital refused long-term care assessment, then discharged father</span><span class="src">Reddit r/ontario · Apr 2025</span></summary>
+  <div class="body"><p>An 87-year-old man with vascular dementia was sent home after five weeks in a geriatric mental health unit. The hospital would not let him be assessed for long-term care while he was an inpatient. He fell twice within weeks at a relative&#x27;s home and ended up back in hospital.</p><blockquote>&ldquo;Hospital social worker said he could not be assessed in hospital&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1k8kbjt/long_term_care_home_process_nightmare/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Family begged hospital not to discharge father needing 24/7 care</span><span class="src">Reddit r/ontario · Oct 2025</span></summary>
+  <div class="body"><p>A man with dementia and multiple system atrophy was discharged after two months in hospital, although every clinician agreed he needed round-the-clock care. Home care was capped at 20 PSW hours a week. His wife and adult child were left to cope alone.</p><blockquote>&ldquo;We were pretty much begging them to not release him&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1og9hde/can_you_refuse_hospital_discharges_for_loved_ones/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Hospital guilts family to take paralyzed stroke patient home</span><span class="src">Reddit r/ontario · Jan 2025</span></summary>
+  <div class="body"><p>A man paralyzed by a stroke needs two or three people and a lift to move him. His family says the hospital is pressing his retired, partly disabled children to take him home rather than help secure long-term care. They describe staff as rude and accusing.</p><blockquote>&ldquo;outright guilting my parents&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1i34xcd/grandpa_had_stroke_hospital_is_pushing_my_parents/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Father with broken hip and dementia given ten days to leave</span><span class="src">Reddit r/healthcare · Jan 2024</span></summary>
+  <div class="body"><p>A 78-year-old man broke his hip, and his dementia went from mild to late stage almost overnight. Staff said he would be discharged within ten days whether or not he qualified for rehab, and told the family he was no longer their problem. His wife could not care for him with only two PSW visits a day.</p><blockquote>&ldquo;no longer their problem&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/healthcare/comments/18xpmos/ontario_canada_78_yo_elderly_father_hip_fracture/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Mother sent home still delirious after five ER visits</span><span class="src">Reddit r/CaregiverSupport · Jun 2024</span></summary>
+  <div class="body"><p>A 70-year-old woman with delirium was turned away from the ER four times before she was admitted. After three weeks she was discharged, still confused and unable to urinate without a catheter. At home she got PSW visits of about ten minutes.</p><blockquote>&ldquo;in hopes the delirum will get better at home&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/CaregiverSupport/comments/1dk0ohi/venting_about_my_moms_care/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Frail 75-year-old repeatedly sent home with no home care</span><span class="src">Reddit r/londonontario · Aug 2024</span></summary>
+  <div class="body"><p>A man who lives alone with an ostomy after a botched operation keeps being discharged from a London hospital. Home care is promised but never arrives, and he declines and is readmitted each time. He has now spoken with MAID assessors, and the friend advocating for him gets no callbacks.</p><blockquote>&ldquo;They promise home care but it never happens.&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/londonontario/comments/1f2jv6v/victoria_hospital_my_friend_needs_help/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Windsor family given 24 hours to accept nursing home</span><span class="src">Canadian Press via TVO · Jun 2024</span></summary>
+  <div class="body"><p>An 83-year-old woman was discharged after breaking her hip, and her family had 24 hours to accept a home they found unacceptable. When they refused, daily charges began and grew to a $26,000 bill. Her daughter refuses to pay it.</p><blockquote>&ldquo;I will not stop until this bill is dead.&rdquo;</blockquote><a class="orig" href="https://amp.tvo.org/article/more-than-400-patients-moved-into-ontario-nursing-homes-they-didnt-choose-to-go-to" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Hospital tries to discharge parent with dementia without care plan</span><span class="src">Reddit r/ontario · Feb 2023</span></summary>
+  <div class="body"><p>A family says a hospital kept trying to discharge a parent in crisis with dementia while refusing to start a long-term care assessment. Staff suggested loans or a reverse mortgage to pay for a private retirement home. The family had to escalate before this changed.</p><blockquote>&ldquo;They have been extremely insensitive to someone who has dementia&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/114r1bf/hospital_attempting_to_discharge_patient_with/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Man with MS discharged from hospital to a shelter</span><span class="src">Reddit r/Hamilton · Sep 2023</span></summary>
+  <div class="body"><p>A 66-year-old man with MS who needs full-time help was discharged from a Hamilton hospital without a safe place to go. His only child later found him in a shelter.</p><blockquote>&ldquo;The hospital discharged him and i had to find him at a shelter&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/Hamilton/comments/16slwgi/homes_for_elderly/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Ottawa woman accepts unwanted care home out of fear</span><span class="src">CTV Ottawa · Sep 2022</span></summary>
+  <div class="body"><p>A 62-year-old Ottawa woman with MS and diabetes accepted a home not on her list rather than risk being sent up to 70 km away under the new law. Her caregiver says her pain and anxiety got worse afterwards.</p><blockquote>&ldquo;Operating on fear&rdquo;</blockquote><a class="orig" href="https://ottawa.ctvnews.ca/operating-on-fear-ottawa-woman-speaks-out-about-impact-of-new-nursing-home-law-1.6083218" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Inquest hears of woman&#x27;s death after discharge amid bed shortage</span><span class="src">CTV News · May 2015</span></summary>
+  <div class="body"><p>At an Ontario inquest into the death of a woman discharged from hospital, a doctor testified that there were not enough open beds.</p><blockquote>&ldquo;Not enough open beds&rdquo;</blockquote><a class="orig" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOanRVOE9XdVBJOU5FTDBIZXRqQnNOMXV4bWJDdy1xb3VIY0hBREFfQjloMnFOVUxJVE5vWk4ySTc4WC13TmlFN2dfcWFnbFRHY1c3b0J5b2xLUmtGb1lGMzVMMEZmR2R4Nk16UHhwQXpZU0dGcERvS0Q3LXNEV2l2WlJxSWEzUDhvUXNiSDFRVUduXzU0MGlMNkc4eHYweEZaeGhlUkdoWElncGR5LVlQU041V1VKc2xCUWRqeGRCSHdzbTBaRWRiNTdVYlNud1k?oc=5" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Pushed out of hospital">
+  <summary><span class="cat">Pushed out of hospital</span><span class="st">Young man discharged with headache pills dies of brain bleed</span><span class="src">CBC</span></summary>
+  <div class="body"><p>A 32-year-old man from a First Nation in northwestern Ontario was discharged from hospital with headache medication. He died the next day of a brain bleed.</p><a class="orig" href="https://amp.cbc.ca/lite/story/1.6279383" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Treatment refused or delayed">
+  <summary><span class="cat">Treatment refused or delayed</span><span class="st">Stage 3 breast cancer patient still waiting a month for treatment</span><span class="src">Reddit r/ontario · Jan 2026</span></summary>
+  <div class="body"><p>A Durham woman was diagnosed with stage 3 breast cancer after her symptoms had been ignored. A referral was sent to the wrong clinic. She was passed between tests with no treatment plan and no returned calls.</p><blockquote>&ldquo;No one will return her calls on time&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1qc5x5c/mom_been_waiting_a_month_to_start_breast_cancer/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Treatment refused or delayed">
+  <summary><span class="cat">Treatment refused or delayed</span><span class="st">Paramedics refuse to take mother with stroke-like symptoms</span><span class="src">Reddit r/AgingParents · Dec 2025</span></summary>
+  <div class="body"><p>A student found her 75-year-old mother badly confused and called an ambulance, but paramedics did not take her. She persuaded her mother to go to the ER the next day. A scan showed past mini-strokes and a likely TIA the night before.</p><blockquote>&ldquo;I&#x27;m still so mad that the paramedics didn&#x27;t take her last night&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/AgingParents/comments/1ppo662/rapid_mental_decline_and_difficulty_navigating/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Treatment refused or delayed">
+  <summary><span class="cat">Treatment refused or delayed</span><span class="st">ER nurse turns away patient in severe pain</span><span class="src">Reddit r/ontario · Jul 2024</span></summary>
+  <div class="body"><p>A man arrived at a local ER at night in severe pain, and a nurse escorted him out and told him to return the next day. At another hospital, scans showed kidney stones on both sides, a hernia and severe arthritis.</p><blockquote>&ldquo;come back tomorrow&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1e12ckc/is_this_normal_treatment/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Treatment refused or delayed">
+  <summary><span class="cat">Treatment refused or delayed</span><span class="st">Urgent ultrasound showing blocked artery went unread for months</span><span class="src">Reddit r/ontario · Feb 2023</span></summary>
+  <div class="body"><p>A woman in her 50s waited months for a specialist, and her ultrasound result was never reviewed. Nine months later it turned up in her MRI file. It had been marked urgent and showed a severe arterial blockage in her leg.</p><blockquote>&ldquo;clearly marked as urgent&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/10qfwmb/my_mother_55f_had_a_serious_health_condition/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Treatment refused or delayed">
+  <summary><span class="cat">Treatment refused or delayed</span><span class="st">Families say care home denied loved ones hospital trips</span><span class="src">Georgina Post · Jun 2020</span></summary>
+  <div class="body"><p>Families at a Pickering long-term care home say staff told them residents would be kept on palliative care and would not be taken to hospital. They also say residents went without food, water and medication during the outbreak.</p><a class="orig" href="https://georginapost.com/2020/06/18/families-accuse-ontario-long-term-care-home-of-denying-loved-ones-hospital-trips/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Daughter says palliative team kept passing the buck</span><span class="src">Reddit r/ontario · Feb 2026</span></summary>
+  <div class="body"><p>A woman in her 30s says her father came home on palliative care with a DNR in place, and the family repeatedly asked to have his heart defibrillator turned off. Every part of the care team sent them to someone else, and the doctor said it would only be done once he was actively dying. She describes feeling completely alone in his last weeks.</p><blockquote>&ldquo;each person passed the buck to another&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1rb9aa6/substandard_care_from_our_healthcare_for_my_father/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Wife told husband will likely never get long-term care</span><span class="src">Reddit r/CaregiverSupport · Jun 2026</span></summary>
+  <div class="body"><p>A woman has cared for her husband for 15 years through strokes, vascular dementia and 11 falls this year alone. Ontario Health atHome told her he is nowhere near crisis status because she is there. She now has health problems of her own.</p><blockquote>&ldquo;there is no realistic chance of him likely ever getting in from home&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/CaregiverSupport/comments/1uaypm6/overwhelmed_and_at_a_loss/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Ottawa man dies alone without approved home care</span><span class="src">Ontario NDP (party statement) · Apr 2026</span></summary>
+  <div class="body"><p>An Ottawa man approved for home care died alone without receiving it. His family had asked for in-person support, but the system relied on phone calls he could not answer. This comes from an opposition party statement.</p><blockquote>&ldquo;His file was closed without anyone ever knocking on his door.&rdquo;</blockquote><a class="orig" href="https://www.ontariondp.ca/news/ndp-mpp-raises-serious-concerns-about-ontario-s-home-care-system-failures" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Promised home care never arrives after mother&#x27;s hip surgery</span><span class="src">Reddit r/CaregiverSupport · Jul 2025</span></summary>
+  <div class="body"><p>A woman with dementia came home incontinent and unable to move after hip surgery. The PSW and physio visits the hospital was supposed to arrange never happened. Her daughter drives an hour every day to wash and change her.</p><blockquote>&ldquo;NOTHING HAS HAPPENED&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/CaregiverSupport/comments/1m78rbd/screaming_into_the_void/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Home care supply failures leave patients without essentials</span><span class="src">Canadian Press via 610 CKTB · Sep 2025</span></summary>
+  <div class="body"><p>The Patient Ombudsman found that failed supply contracts left home care patients without deliveries. One patient on IV antibiotics had to go to hospital, and a Stage 4 cancer patient&#x27;s supplies arrived minutes before they died.</p><a class="orig" href="https://610cktb.com/lack-of-planning-oversight-led-to-ontario-home-care-supply-shortages-ombudsman/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Son says senior care in Ontario is broken</span><span class="src">Reddit r/ontario · Apr 2024</span></summary>
+  <div class="body"><p>A man in his 50s says his father kept being sent home from rural hospitals with no beds, and declined each time before he died. His mother now has dementia, and the family&#x27;s home care brings a new PSW with a new schedule every week.</p><blockquote>&ldquo;There are no regular PSWs.&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1c8ysy7/senior_care_in_ontario_is_broken/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Home care referral lost after surgery discharge</span><span class="src">Reddit r/ontario · Dec 2024</span></summary>
+  <div class="body"><p>After surgery at St. Joseph&#x27;s in Hamilton, a patient&#x27;s follow-up home care referral could not be found, though a copy came with her discharge papers. Days of calls followed. In the end, the home care office admitted it had not been checking the fax line where the referral arrived.</p><blockquote>&ldquo;which apparently they weren&#x27;t monitoring&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1hkr014/help_hospital_switchboard_limbo/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Confirmed respite stay for grandmother with dementia cancelled without reason</span><span class="src">Reddit r/ontario · Jan 2024</span></summary>
+  <div class="body"><p>A family spent months getting respite care approved for a grandmother with dementia, and the coordinator confirmed it. Two weeks before the stay, a fill-in worker cancelled it with no reason given. Any replacement was likely to be hours away.</p><blockquote>&ldquo;our respite care has been CANCELLED&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/18x81n1/respite_care_toronto_lhin_cancelled/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Mother waits two weeks for home care after two hospitalizations</span><span class="src">Reddit r/mississauga · Aug 2023</span></summary>
+  <div class="body"><p>A 79-year-old woman agreed to home care when she was discharged after a fall down stairs, but no one came for two weeks. She was barely managing to wash or eat while also caring for her partner in his 80s. An assessment finally happened only after her family pushed.</p><blockquote>&ldquo;doing the bare minimum of hygiene to keep from stinking&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/mississauga/comments/15qf7pf/help_for_elderly_lady/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Stroke survivor&#x27;s approved home care visits failed to show</span><span class="src">CBC Marketplace · Dec 2021</span></summary>
+  <div class="body"><p>A London man who had a severe stroke was approved for two PSWs twice a day, but visits did not come as scheduled, and he ended up in a nursing home. The investigation found missed home care visits are not publicly reported.</p><a class="orig" href="https://amp.cbc.ca/lite/story/1.6387911" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Collingwood family covers missed PSW visits for father</span><span class="src">CollingwoodToday · 2021</span></summary>
+  <div class="body"><p>An 87-year-old man&#x27;s PSW visits were often missed. His 85-year-old wife, who has Parkinson&#x27;s, and help the family paid for privately filled the gaps.</p><a class="orig" href="https://www.collingwoodtoday.ca/local-news/personal-support-worker-shortage-hits-home-for-collingwood-family-5041511" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Man with ALS sleeps in wheelchair for three days</span><span class="src">CBC London · 2020</span></summary>
+  <div class="body"><p>A 76-year-old London man with ALS slept in his wheelchair for three nights because his PSW did not come. The agency blamed staffing shortages.</p><a class="orig" href="https://amp.cbc.ca/news/canada/london/psw-shortage-george-white-1.5781127" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Dying father gets two hours of PSW help a week</span><span class="src">Reddit r/ontario · Nov 2019</span></summary>
+  <div class="body"><p>A man with stage IV melanoma who kept falling got only two one-hour PSW visits a week. The case worker kept promising nursing, physio and more help, but none of it arrived. His wife, who is disabled herself, was burning out as his main caregiver.</p><blockquote>&ldquo;none of that ever materializes&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/dt90uu/home_care_services_in_ontario_how_is_the_level_of/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Woman with cerebral palsy stuck in hospital over PSW dispute</span><span class="src">CBC Ottawa · 2019</span></summary>
+  <div class="body"><p>A 62-year-old Ottawa woman with cerebral palsy was kept in hospital by a dispute over her PSW assessment and appealed to a review board. Local officials said the number of people stuck in hospital for lack of PSWs had tripled in a year.</p><a class="orig" href="https://www.cbc.ca/1.5338136" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Home care failures">
+  <summary><span class="cat">Home care failures</span><span class="st">Ottawa woman with MS spends over a year in hospital</span><span class="src">CTV Ottawa · Jan 2019</span></summary>
+  <div class="body"><p>An Ottawa woman with MS spent about a year and a half in hospital because no PSWs were available to support her at home.</p><a class="orig" href="https://ottawa.ctvnews.ca/ottawa-woman-with-ms-back-home-today-after-psw-shortage-keeps-her-in-hospital-for-more-than-a-year-1.4239661" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Afraid to complain">
+  <summary><span class="cat">Afraid to complain</span><span class="st">Falling father&#x27;s GP refuses neurology referral; family fears backlash</span><span class="src">Reddit r/ontario · Aug 2026</span></summary>
+  <div class="body"><p>An older man suddenly began falling and shaking, but his GP refused the neurology referral his physiotherapist recommended. The family is afraid that pushing back or going to urgent care will get him dropped as a patient and blacklisted.</p><blockquote>&ldquo;My father is afraid that if he switched GPs he will somehow be blacklisted&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/ontario/comments/1vq6vzc/does_your_gp_get_dinged_if_you_go_to_urgent_care/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Afraid to complain">
+  <summary><span class="cat">Afraid to complain</span><span class="st">Daughter banned from care home after raising concerns</span><span class="src">Centretown Buzz (MPP column) · 2022</span></summary>
+  <div class="body"><p>A woman who raised concerns about her father&#x27;s care at a Peterborough long-term care home was served a trespass notice for allegedly harassing staff and barred from the family council. This comes from an MPP&#x27;s column.</p><a class="orig" href="https://centretownbuzz.ca/?p=7960" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Afraid to complain">
+  <summary><span class="cat">Afraid to complain</span><span class="st">Daughter banned 316 days after complaining about mother&#x27;s residence</span><span class="src">Kitchissippi Times · 2019</span></summary>
+  <div class="body"><p>An Ottawa woman complained to the retirement home regulator and was then banned from visiting her 98-year-old mother for 316 days. Her case inspired a motion known as Voula&#x27;s Law.</p><a class="orig" href="https://kitchissippi.com/provincial-update-well-hold-the-ground-voulas-law-established/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Afraid to complain">
+  <summary><span class="cat">Afraid to complain</span><span class="st">Surgeon threatened to label cancer patient a problem patient</span><span class="src">Reddit r/londonontario · Jul 2018</span></summary>
+  <div class="body"><p>A 75-year-old woman&#x27;s second cataract surgery was pushed back after she was diagnosed with cancer. When her son asked why, the surgeon allegedly threatened to drop her and mark her chart. He then discharged her and cancelled the surgery, and she was afraid to complain.</p><blockquote>&ldquo;he would write in her chart that she was a problem patient&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/londonontario/comments/8xh7ix/my_mother_is_being_denied_medical_care_by_st/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Afraid to complain">
+  <summary><span class="cat">Afraid to complain</span><span class="st">Family says assault of grandmother in hospital was kept quiet</span><span class="src">Global News · 2017</span></summary>
+  <div class="body"><p>A family says the alleged sexual assault of their 90-year-old grandmother by a worker at a Richmond Hill hospital was handled internally. They turned to a civil lawsuit to get answers.</p><a class="orig" href="https://globalnews.ca/news/3694880/elder-abuse-allegations-mackenzie-health-richmond-hill" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Afraid to complain">
+  <summary><span class="cat">Afraid to complain</span><span class="st">Retired nurses given trespass notices after complaining</span><span class="src">Ottawa Citizen · Jul 2017</span></summary>
+  <div class="body"><p>Two retired nurses received trespass notices from a city-run Ottawa long-term care home after they complained about care. A ministry inspection then found the home non-compliant in several areas of one mother&#x27;s care.</p><blockquote>&ldquo;You complain and this is the price you pay&rdquo;</blockquote><a class="orig" href="https://www.pressreader.com/canada/ottawa-citizen/20170712/281479276455266" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Died waiting">
+  <summary><span class="cat">Died waiting</span><span class="st">Jury rules young woman died after delayed sepsis treatment</span><span class="src">CHCH · Apr 2026</span></summary>
+  <div class="body"><p>A 24-year-old First Nations woman was sent home from a St. Catharines ER with Tylenol and died after returning the next day. An inquest jury found she died of sepsis with delayed treatment and made 68 recommendations.</p><a class="orig" href="https://www.chch.com/chch-news/jury-determines-heather-winterstein-died-by-non-natural-causes/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Died waiting">
+  <summary><span class="cat">Died waiting</span><span class="st">Bladder cancer left untreated for months before father&#x27;s death</span><span class="src">Reddit r/legaladvicecanada · May 2025</span></summary>
+  <div class="body"><p>A man with high-grade bladder cancer was never offered follow-up treatment after surgery. Later he was admitted bleeding and confused, and the family says the hospital did nothing for over a month while waiting for a visiting urologist. He died in April 2025.</p><blockquote>&ldquo;the hospital did nothing for over a month&rdquo;</blockquote><a class="orig" href="https://www.reddit.com/r/legaladvicecanada/comments/1kwubgq/is_there_legal_recourse_when_delayed_treatment/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Died waiting">
+  <summary><span class="cat">Died waiting</span><span class="st">Teen dies after eight-hour wait to see ER doctor</span><span class="src">CTV News · 2025</span></summary>
+  <div class="body"><p>A 16-year-old was triaged as urgent but waited more than eight hours to see a doctor in an Oakville ER while his mother warned nurses he was getting worse. He died of sepsis. An inquest was granted, but the family was told it could take years.</p><a class="orig" href="https://www.ctvnews.ca/toronto/article/family-pushes-for-inquest-into-ontario-teens-death-following-eight-hour-wait-to-see-doctor-in-er/" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Died waiting">
+  <summary><span class="cat">Died waiting</span><span class="st">Coroner investigates man&#x27;s cardiac arrest in crowded Kitchener ER</span><span class="src">CTV Toronto · Mar 2023</span></summary>
+  <div class="body"><p>A 68-year-old man went into cardiac arrest while waiting in a crowded Kitchener emergency department, and the coroner investigated. His widow found no chart notes covering several overnight hours.</p><a class="orig" href="https://toronto.ctvnews.ca/ontario-coroner-to-investigate-death-of-man-who-suffered-cardiac-arrest-while-waiting-in-er-1.6881588" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Died waiting">
+  <summary><span class="cat">Died waiting</span><span class="st">Father spent final days on Brampton ER stretcher</span><span class="src">The Pointer · May 2021</span></summary>
+  <div class="body"><p>A son told Brampton city council that after his father&#x27;s second stroke, he spent many of his final days on a stretcher in the emergency department hallway.</p><a class="orig" href="https://thepointer.com/article/2021-05-30/brampton-s-abandoned-healthcare-system-why-do-we-have-to-suffer" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Died waiting">
+  <summary><span class="cat">Died waiting</span><span class="st">Brampton man sent home from hospital dies next day</span><span class="src">Global News · 2021</span></summary>
+  <div class="body"><p>A young man with COVID was sent home from Brampton Civic and later turned away again for lack of beds. He died the next day, and his mother is questioning the system.</p><a class="orig" href="https://globalnews.ca/news/7938845/brampton-mother-questions-hospital-healthcare-system-in-wake-of-sons-covid-19-death" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Died waiting">
+  <summary><span class="cat">Died waiting</span><span class="st">Husband says wife died in hospital hallway awaiting bed</span><span class="src">Ontario NDP (party statement) · Oct 2018</span></summary>
+  <div class="body"><p>A Hamilton man said his wife died in a hospital hallway while waiting for a bed, which took away their final moments together. This comes from an opposition party release.</p><a class="orig" href="https://www.ontariondp.ca/news/hallway-medicine-took-away-couples-final-moments-together" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+<details class="story" data-cat="Died waiting">
+  <summary><span class="cat">Died waiting</span><span class="st">Woman dies during Hamilton &#x27;code zero&#x27; ambulance shortage</span><span class="src">CBC Hamilton · Jul 2017</span></summary>
+  <div class="body"><p>A 71-year-old Hamilton woman had a heart attack while no ambulances were free. Paramedics took 28 minutes to arrive, and she died. The coroner investigated.</p><a class="orig" href="https://amp.cbc.ca/news/canada/hamilton/code-zero-death-1.4284581" target="_blank" rel="noopener noreferrer nofollow">Read the original &rarr;</a></div>
+</details>
+    </div>
+  </section>
   <section class="wrap cta" id="share">
     <h3>Don't let them bury this too.</h3>
     <p>Send it to one person who still thinks it can't happen to their family. Got a story of your own? <a class="mail" href="mailto:is@all.exposed?subject=My%20story">is@all.exposed</a></p>
@@ -310,6 +601,11 @@
     const data={title:'"Let Her Die in Peace"',text:"Five years inside Ontario's health care system. My mother didn't survive it.",url:location.href};
     try{ if(navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(location.href); document.getElementById('sharebtn').textContent='Link copied'; } }catch(e){}
   });
+  document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));
+    const c=b.dataset.cat;
+    document.querySelectorAll('.story').forEach(s=>s.classList.toggle('hide',c!=='all'&&s.dataset.cat!==c));
+  }));
 </script>
 </body>
 </html>
